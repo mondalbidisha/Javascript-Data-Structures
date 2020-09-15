@@ -120,7 +120,7 @@ BST.add(5);
 BST.add(7);
 BST.add(20);
 
-console.log('inOrder: ' + BST.levelOrderTraversal());
+console.log('levelOrder: ' + BST.levelOrderTraversal());
 console.log('inOrder: ' + BST.inOrderTraversal());
 console.log('preOrder: ' + BST.preOrderTraversal());
 console.log('postOrder: ' + BST.postOrderTraversal());
