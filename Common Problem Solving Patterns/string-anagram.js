@@ -1,6 +1,8 @@
 // A problem to check if two strings are Anagrams of each other
 // Time Complexity = O(n)
 
+// Logic - Maintain two objects containing the character and frequency as key value pairs.
+// If both the objects have the same key values pairs then the strings are anagrams of each other.
 const isAnagram = (str1, str2) => {
   let frequencyCounter1 = {};
   let frequencyCounter2 = {};
@@ -12,15 +14,18 @@ const isAnagram = (str1, str2) => {
     for(let index in str1) {
       frequencyCounter1[str1.charAt(index)] = (frequencyCounter1[str1.charAt(index)] || 0) + 1; 
     }
+
     for(let index in str2) {
       frequencyCounter2[str2.charAt(index)] = (frequencyCounter2[str2.charAt(index)] || 0) + 1; 
     }
+
     for(let key in str1) {
       if(frequencyCounter1[key] !== frequencyCounter2[key]) {
         console.log(`${str1} and ${str2} are not anagrams!`);
         return;
       }
     }
+    
     console.log(`${str1} and ${str2} are anagrams!`);
     return;
   }

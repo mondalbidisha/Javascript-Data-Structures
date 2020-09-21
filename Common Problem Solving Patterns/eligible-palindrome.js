@@ -1,6 +1,10 @@
 // A problem to check if string can be converted into a palindrome by rearranging the characters
 // Time Complexity = O(n)
 
+// Logic - For a string to be an eligible palindrome following condition shoild be met -
+// A set of characters can form a palindrome if at most one character occurs odd number 
+// of times and all characters occur even number of times. 
+
 const isEligiblePalindrome = (str) => {
   let frequencyCounter = {};
   let oddCount = 0;
